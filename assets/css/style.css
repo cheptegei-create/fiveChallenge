@@ -15,11 +15,15 @@ body {
   .description {
     white-space: pre-wrap;
   }
+
+  .description:hover {
+    cursor: pointer;
+  }
   
   .time-block {
     border-radius: 15px;
   }
-  
+
   .row {
     border-top: 1px solid white;
   }
