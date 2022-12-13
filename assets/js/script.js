@@ -1,11 +1,11 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
+// the code isn't running until the browser has finished rendering all the elements
 // in the html.
 $(function () {
   //setting up and displaying the current date and live time on the header
   window.onload = displayClock();
   function displayClock() {
-    var currentDay = dayjs().format("MMMM D, YYYY h:mm:ss:a");
+    var currentDay = dayjs().format("MMMM D, YYYY H:mm:ss:a");
     $("#currentDay").text(currentDay);
 
     setTimeout(displayClock, 1000);
@@ -16,10 +16,6 @@ $(function () {
     //get the time value and event desription
     var description = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
-    // var plans = {
-    //   agenda: description,
-    //   currentTime: time,
-    // };
 
     localStorage.setItem(time, description);
     alert("plans stored in local storage");
@@ -27,7 +23,7 @@ $(function () {
 
   function timeKeeper() {
     //setting current hour
-    var moment = dayjs().format("h");
+    var moment = dayjs().format("H");
 
     //setting a loop on the blocks
     $(".time-block").each(function () {
