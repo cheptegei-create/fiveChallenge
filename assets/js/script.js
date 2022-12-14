@@ -23,24 +23,26 @@ $(function () {
 
   function timeKeeper() {
     //setting current hour
-    var moment = dayjs().format("H");
-
+    var now = dayjs();
+    var moment = now.hour();
+    console.log(moment);
     //setting a loop on the blocks
     $(".time-block").each(function () {
-      var catchTime = parseInt($(this).attr("id").split("hour")[1]);
+      var catchTime = parseInt($(this).attr("id").split("-")[1]);
+      console.log(catchTime);
 
       //introducing an if condition to color code the blocks
       if (catchTime < moment) {
-        $(this).removeClass('future');
-        $(this).removeClass('present');
+        $(this).removeClass("future");
+        $(this).removeClass("present");
         $(this).addClass("past");
       } else if (catchTime === moment) {
-        $(this).removeClass('future');
-        $(this).removeClass('past');
+        $(this).removeClass("future");
+        $(this).removeClass("past");
         $(this).addClass("present");
       } else {
-        $(this).removeClass('past');
-        $(this).removeClass('present');
+        $(this).removeClass("past");
+        $(this).removeClass("present");
         $(this).addClass("future");
       }
     });
