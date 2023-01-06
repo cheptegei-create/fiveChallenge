@@ -13,7 +13,7 @@ Sometime it's difficult to keep track of what you've done in your day to day act
 
 ## Installation
 
-Just click on the website link https://cheptegei-create.github.io/fiveChallenge/
+Just click on the website link https://cheptegei-create.github.io/work-day-scheduler/
 
 ## Usage
 
